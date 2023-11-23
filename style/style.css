@@ -1,5 +1,10 @@
 /* eslint-disable-next-line */
 
+body {
+   padding: 0%;
+   margin: 0%;
+}
+
 @keyframes hue {
     from {
        filter: hue-rotate(0);
@@ -8,9 +13,9 @@
     to {
        filter: hue-rotate(-360deg);
     }
- }
- 
- .rainbow-text {
+}
+
+.rainbow-text {
     display: inline-block;
     position: relative;
     font-weight: 500;
@@ -19,4 +24,59 @@
     animation: hue 1.5s linear infinite;
     background-image: linear-gradient(to right bottom, rgb(255,0,0), rgb(255,128,0), rgb(255,255,0), rgb(0,255,0), rgb(0,255,128), rgb(0,255,255), rgb(0,128,255), rgb(0,0,255), rgb(128,0,255), rgb(255,0,255), rgb(255,0,128));
     -webkit-background-clip: text;
- }
+}
+
+header {
+      background-color: deeppink;
+      height: 80px;
+      width: 100%;
+      position: relative;
+
+}
+
+h1 {
+   background-color: deeppink;
+   color: aliceblue;
+   position: absolute;
+   left: 100px ;
+   top:0;
+   line-height: 50px;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw; /* Corrected margin property */
+}
+
+header a {
+   color: aliceblue;
+   text-decoration: none;
+}
+
+header a:hover {
+   text-decoration: underline;
+}
+
+header ul{
+   position: absolute;
+   right: 25vw;
+   top: 0;
+   line-height: 80px;
+}
+section{
+   background-color: rgb(39, 36, 36);
+   color: red;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+section a{
+   color: white;
+   text-decoration: none;
+}
+section a:hover{
+   text-decoration: underline;
+}
+blockquote{
+   color: red;
+}
