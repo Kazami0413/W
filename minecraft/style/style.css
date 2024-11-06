@@ -1,0 +1,21 @@
+
+
+
+ * {
+    box-sizing: border-box;
+ }
+
+ body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    background-image: url(/minecraft/img/RhxYP5VZuYbpXFdKJSj3Sn-1200-80.png);
+    background-size: cover;
+    background-position: center;
+    font: 14pt "Minecraftia"
+    sans-serif;
+    position: relative;
+ }

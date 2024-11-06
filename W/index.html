@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Image Upload</h1> <!-- 標題 -->
+
+    <h2>Uploaded Image:</h2> <!-- 用戶上傳圖片顯示 -->
+    <img src="{{ image_path }}" alt="Uploaded Image">
+
+    <h2>Return Image:</h2> <!-- 伺服器返回圖片顯示 -->
+    <img src="{{ done_image_path }}" alt="Return Image">
+
+    <form method="POST" action="/upload" enctype="multipart/form-data"><!-- 設定 / 上傳按鈕 -->
+        <br />
+        <input type="file" name="image" accept="image/*">
+        <br />
+        <label for="conf">Confidence Threshold (0-1):</label>
+        <br />
+        <input type="number" name="conf" step="0.01" min="0" max="1" value="0.6" />
+        <br />
+        <br />
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Error:</h2> <!-- 錯誤訊息 -->
+    <p>{{ error }}</p>
+
+</body>
+
+</html>
